@@ -1,4 +1,4 @@
-package com.example.demo.com.example.demo.model;
+package com.fx.loja.model;
 
 import org.springframework.security.core.GrantedAuthority;
 

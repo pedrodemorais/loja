@@ -1,8 +1,7 @@
-package com.example.demo.com.example.demo.model;
+package com.fx.loja.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Objects;
 
 @Entity
 @Table(name="marca_produto")

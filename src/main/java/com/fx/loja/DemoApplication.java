@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.fx.loja;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

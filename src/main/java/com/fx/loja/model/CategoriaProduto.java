@@ -1,6 +1,4 @@
-package com.example.demo.com.example.demo.model;
-
-import net.bytebuddy.dynamic.loading.InjectionClassLoader;
+package com.fx.loja.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
