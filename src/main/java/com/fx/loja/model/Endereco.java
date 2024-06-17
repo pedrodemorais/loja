@@ -1,5 +1,7 @@
 package com.fx.loja.model;
 
+import com.fx.loja.enums.TipoEndereco;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
@@ -10,9 +12,7 @@ import java.util.Objects;
 public class Endereco implements Serializable {
     private static final long serialVersionUID=1L;
 
-    @ManyToOne(targetEntity = Pessoa.class)//muitos enderecos para uma pessoa
-    @JoinColumn(name = "pessoa_id", nullable = false, foreignKey = @ForeignKey(value=ConstraintMode.CONSTRAINT,name = "pessoa_fk"))
-    private Pessoa pessoa;
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_endereco")
@@ -24,6 +24,13 @@ public class Endereco implements Serializable {
     private String bairro;
     private String uf;
     private String cidade;
+
+    @ManyToOne(targetEntity = Pessoa.class)//muitos enderecos para uma pessoa
+    @JoinColumn(name = "pessoa_id", nullable = false, foreignKey = @ForeignKey(value=ConstraintMode.CONSTRAINT,name = "pessoa_fk"))
+    private Pessoa pessoa;
+
+    @Enumerated(EnumType.STRING)
+    private TipoEndereco tipoEndereco;
 
     public Pessoa getPessoa() {
         return pessoa;
@@ -95,6 +102,14 @@ public class Endereco implements Serializable {
 
     public void setCidade(String cidade) {
         this.cidade = cidade;
+    }
+
+    public TipoEndereco getTipoEndereco() {
+        return tipoEndereco;
+    }
+
+    public void setTipoEndereco(TipoEndereco tipoEndereco) {
+        this.tipoEndereco = tipoEndereco;
     }
 
     @Override
