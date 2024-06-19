@@ -17,9 +17,11 @@ public class CupomDesconto implements Serializable {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_cupom_desconto")
     private Long id;
 
+    @Column(nullable = false)
     private String CodigoDescricao;
     private BigDecimal valorRealDesconto;
     private BigDecimal valorPercentualDesconto;
+    @Column(nullable = false)
     @Temporal(TemporalType.DATE)
     private Date dataValidadeCupom;
 

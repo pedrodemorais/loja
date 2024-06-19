@@ -16,12 +16,17 @@ public class NotaFiscalCompra {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_nota_fiscal_compra")
     private Long id;
 
+    @Column(nullable = false)
     private String numeroNota;
+    @Column(nullable = false)
     private String serieNota;
     private String descricaoObservacao;
+    @Column(nullable = false)
     private BigDecimal valorTotal = BigDecimal.ZERO;
     private BigDecimal valorDesconto = BigDecimal.ZERO;
+    @Column(nullable = false)
     private BigDecimal valorIcms = BigDecimal.ZERO;
+    @Column(nullable = false)
     @Temporal(TemporalType.DATE)
     private Date DataCompra;
 
