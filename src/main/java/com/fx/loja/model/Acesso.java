@@ -7,7 +7,8 @@ import java.util.Objects;
 
 @Entity
 @Table(name="acesso")
-@SequenceGenerator(name = "sq_acesso", sequenceName = "sq_acesso", initialValue = 1, allocationSize = 1)
+@SequenceGenerator(name = "sq_acesso", sequenceName = "sq_acesso",allocationSize = 1)
+
 public class Acesso implements GrantedAuthority {
 
     private static final long serialVersionUID=1L;
